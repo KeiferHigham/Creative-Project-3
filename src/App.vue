@@ -5,9 +5,38 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+  <p> {{GetFirstItem}} </p>
   </div>
 </template>
 
+
+
+<script>
+export default {
+
+  computed: {
+
+    numCartItems () {
+      const numItems = this.$root.$data.numItems
+      return numItems
+    },
+    GetFirstItem () {
+    return this.$root.$data.Movies[0]
+    },
+
+  },
+
+
+
+  }
+
+
+
+
+
+
+
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
