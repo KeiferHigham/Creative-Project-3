@@ -6,8 +6,13 @@
       <router-link to="/Find">Find</router-link>
     </div>
     <router-view/>
-  <p> {{GetFirstItem}} </p>
-  <div class="github-footer-fixed"><a href='https://github.com/KeiferHigham/Creative-Project-3.git'>Github Repository</a></div>
+  <!--<p> {{GetFirstItem}} </p>-->
+  <div class="footer-names">
+          <p>Keifer Higham, Katie Rencher</p>
+</div>
+
+
+  <div class="github-footer-fixed"><a href='https://github.com/KeiferHigham/Creative-Project-3.git'><img src='../images/github-dark.svg' /></a></div>
   </div>
 
 </template>
@@ -29,18 +34,33 @@ export default {
 
   },
 
-
-
   }
 
-
-
-
-
-
-
 </script>
+
 <style>
+body {
+  background-color: #d4e0fa;
+}
+
+.github-footer-fixed {
+user-select: none;
+width: 40px;
+height: 40px;
+position: fixed;
+right: 2vh;
+bottom: 2vh;
+font-size: 25%;
+}
+
+
+.footer-names {
+position: fixed;
+right: 10vh;
+bottom: 2vh;
+font-size: 25%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,6 +71,7 @@ export default {
 
 #nav {
   padding: 30px;
+  font-size: 45px;
 }
 
 #nav a {
@@ -60,5 +81,11 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+@media only screen and (max-width:401px) {
+  #nav {
+    font-size: 20px;
+  }
 }
 </style>

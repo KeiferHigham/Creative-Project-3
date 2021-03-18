@@ -1,8 +1,9 @@
 <template>
 <div class="Moves">
+  <p>Use these buttons to find your favorite movies by the decades and add them to your favorites list.</p>
+  <p>Click on <strong>Favorites</strong> above to view your list</p>
 
 <div class="MovieButtons">
-<h2> Hello </h2>
 <button @click="earlyMovies()"> early 1900s</button>
 <button @click="fourties()"> 1940s</button>
 <button @click="fifties()"> 1950s</button>
@@ -17,8 +18,10 @@
 <div class="movies" v-for="movie in filteredMovies" :key="movie.id">
 <div class="movie">
 <h2>{{movie.fullTitle}}</h2>
+<div class="groupMovie">
 <img :src="movie.image">
 <button @click="addFavorites(movie)"> Add To Favorites </button>
+</div>
 </div>
 </div>
 
@@ -36,7 +39,7 @@
 
 <script>
 
-export default {
+  export default {
  name: 'Find',
  data: function() {
  return {
@@ -160,7 +163,7 @@ export default {
 
     },
     addFavorites (movie) {
-     console.log("helloooo")
+     //console.log("helloooo")
      this.$root.$data.Favorites.push(movie);
 
 
@@ -175,3 +178,30 @@ export default {
 
 
 </script>
+
+<style scoped>
+
+  .groupMovie {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #oldMovies {
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+
+  .movie {
+    width: 130px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+</style>
