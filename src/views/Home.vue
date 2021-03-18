@@ -3,7 +3,7 @@
     <h1>Movies</h1>
     <p>Welcome to the favorite movies list creator. Click <strong>Find</strong> above to search for your favorites!!</p>
 
-    <div>{{earlyMovies()}}</div>
+
     <div class="movies">
     <div v-for="movie in filteredMovies" :key="movie.id">
       <div class="movieImg">
@@ -24,13 +24,16 @@ export default {
       filteredMovies: []
     }
   },
+  created() {
+    this.earlyMovies()
+  },
   components: {
 
   },
   methods: {
     earlyMovies () {
       let movie = this.$root.$data.Movies
-    //  console.log(movie)
+      //console.log(movie)
       this.filteredMovies = []
 
       for(let i = 0; i < movie.length; i += 25) {
