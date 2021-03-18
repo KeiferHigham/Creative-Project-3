@@ -6,7 +6,7 @@ import router from './router'
 Vue.config.productionTip = false
 const data = {
   Movies: mock,
-  cart: [],
+  Favorites: [],
   numItems: 0
 }
 

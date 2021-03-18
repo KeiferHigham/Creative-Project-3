@@ -2,11 +2,14 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/Favorites">Favorites</router-link> |
+      <router-link to="/Find">Find</router-link>
     </div>
     <router-view/>
   <p> {{GetFirstItem}} </p>
+  <div class="github-footer-fixed"><a href='https://github.com/KeiferHigham/Creative-Project-3.git'>Github Repository</a></div>
   </div>
+
 </template>
 
 
